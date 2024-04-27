@@ -24,14 +24,14 @@ export default defineUserConfig({
     },
 
     plugins: {
-      // comment: {
-      //   provider: 'Giscus',
-      //   repo: '', 
-      //   repoId: '',
-      //   category: 'Announcements',
-      //   categoryId: '',
-      //   position:'bottom',
-      // },
+      comment: {
+        provider: 'Giscus',
+        repo: 'cfo-pass/docs', 
+        repoId: 'R_kgDOLzklDw',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOLzklD84Ce--n',
+        position:'bottom',
+      },
       components: {
         components: ["BiliBili", "VidStack"],
       },

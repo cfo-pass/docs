@@ -22,6 +22,7 @@ export default defineUserConfig({
       {
         text: 'Google',
         link: 'https://google.com',
+        icon: 'qq',
       }
     ],
 

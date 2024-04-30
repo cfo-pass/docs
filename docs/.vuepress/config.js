@@ -22,7 +22,7 @@ export default defineUserConfig({
       {
         text: 'Google',
         link: 'https://google.com',
-        icon: 'fa-brands fa-google'
+        icon: '{faGoogle}',
       }
     ],
 

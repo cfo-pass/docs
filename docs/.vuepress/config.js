@@ -20,9 +20,8 @@ export default defineUserConfig({
       {text: 'vuepress', link: '/vuepress/'},
       {text: 'pandora', link: '/pandora/'},
       {
-        text: 'Google',
+        text: '<i class="fa-brands fa-google"></i>',
         link: 'https://google.com',
-        icon: 'qq',
       }
     ],
 

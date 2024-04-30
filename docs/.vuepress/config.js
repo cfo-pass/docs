@@ -10,7 +10,11 @@ export default defineUserConfig({
   title: 'API文档',
   description: 'API文档',
   
-  head: [['link', { rel: 'icon', href: 'https://n.sinaimg.cn/sinacn14/300/w1620h1080/20180702/7ec4-hespqry6080115.jpg' }]],
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css' }],
+    ['link', { rel: 'icon', href: 'https://n.sinaimg.cn/sinacn14/300/w1620h1080/20180702/7ec4-hespqry6080115.jpg' }]
+  ],
+
 
   theme: hopeTheme({
     logo: 'https://n.sinaimg.cn/sinacn14/300/w1620h1080/20180702/7ec4-hespqry6080115.jpg',

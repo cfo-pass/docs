@@ -21,7 +21,7 @@ export default defineUserConfig({
 
     sidebar: {
       '/vuepress/': "structure",
-      '/pandora/: "structure",
+      '/pandora/': "structure",
     },
 
     plugins: {

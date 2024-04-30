@@ -9,47 +9,49 @@ tag:
 order: 1
 ---
 
+论坛：`https://linux.do/`
+邀请码地址(CodeCow佬)：`https://linuxdo-invites.speedcow.top `
 
+### SessionToken转accessToken(官方接口，因为在吾皇的论坛没有找到)
 
-### SessionToken转accessToken
-
-```
 import requests
 import json
 
 cookies = {
-    '__Secure-next-auth.session-token': 'eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..4hABSX_shMHqixPb.47YXEHtqQhhczNVSBsd6IImoy7tjvsGDmLCZ0fJnVQzuJbPggCAa3CsM4dJnBobtzMORoHltdINgprKQVvtIXt8_24zXEiPyUkXYq3NX-9hUwgKkFtE5IFv3y7L6-JmfyvBjWuStImr6K_Ew1FtnTg9tim-K6FTUOstOfxBcTfchNTx9Ba7c1G0ratmZdGsW9Hbx_Lt7yVtOLWXn3g-i3FSdX97N469kZYYVRtG0iIkksrq17mCOo7Ji1qoMo3AU9EZ20QUFmnlOA_wJRY_Q3VX6FIETSZra1XX_RveBQ7EeQsBtJZ9THcNoua2cN5pdn9Ws_4Q_O2V7VtHxfaHF_UUlU4d-oQF-BzYb5Cwete43hByw1syb01-WeZZApiFji_AQzjfKMF5Ki5lzyBym_AjX8IA1k_e7K4Rr-ZBuxMpqyGlB6TL3LS_IGFyXso4INB2MMzVJE_bb6bWxxFZz1dUl0OuE2hsXwsFBb-C3Ecc7s3G33rOaS-QhjALicJA2S7PmbZfzwbFoQkbmzXjT0F2Qd5a-r2lTv4u3sjPZVt5pOHe0hKOoVtA11sD9vfe3jxP3qEb-Z5SoXo7M4BVzZb9P2rxLue33-ara22GJYmOn-ayjbuxFgKU6-ksyi9cISZYWURVe6rPe96inuNlpG6mwo9p6KwVzzQZVfquXKMNWx5lY92-KK32VbOT0yFXsB1SrrFELGddhOyJtD7-PPjsj19bJx-XzS-0sFXKB7ad21pgowbobUHXuO1XtrKT9YaJ_I_6Fo4bWQ1xua7jxi_2C0ukAsrFMgDYCriVMmamp0ZG_q4YB22HsW9AfK9wfqet6b5cJArD1q9pDtOnD-zs0Hoi-yiDGPw-7MUINwXUR9bnEvftNpPpm7eFphYg2IGrNoVsOK0Cce4gIYTBfEkR8AVsJkQupKCAIiHazwgFdYo4asGeuKOC94baxPeC5HDlbIzlCDt9Q8118O4W9zLo6RDIoRwveHpXeOxTc_PbsXLggVYyqe2RncIjOzMbLXdZHTyQqNEPBKaXPyN-qUGj0OsVLSjL3t2QdCD8i-x6QcMxphRjuVUtOihvUSaNYPjt-3u2DJUGxOySFK8ycM1_5fB7KdrcV9Picp0HrojBWP_exw2Rvt9SBB5WetrzeP1Nj8QAHjljrl3Hx8gAgWFwMFny1RDWgJswC9jhWLLNBezIwnlf5fD2wQqxVjM7iiRC8NabBmDruwu6Hq_VUuAsjqfaOi2eP8MUWm3S0Lt04ZHeOa2YrnlyRCE1maFINuLkzTbngjqAvCwVyvYqn-htRftHXb_BBzxS-4s9HStXddmmpYkWAiRolFzFKywtWGtg5HPUjj8hqVxwgoVuGkPSOiQ56NkCkykxJKQ5ffVcTJN-fbULlOmiMQUvAXGvXGP98ugMyRJ4R7cVVNrp2L3bRGIp1EL5SwXoxHmNCcnCJSKGZT_0GKVdYDt7p33dHkE7y03rSIgZNTL-H4lZ0yLbl-jJDWOay3pIf-Z9SltkZih782u9pYQfk4zYURL0JYSBG_DtsqqNpaQE7wYKSwaL_TIij-GUJpa9DKKCJQeQHs56GtlcooT7U5eDmNnTDV4bUWjGbpXxCQVnxiLZgaRDiW7MH2tX83qC-5Mc1Av0f66teNwPzW4FTrVXyBTQznCfVt2VafmflKhmqFKnKzMPJ3ucP85DvYibOt1SARL6kM2X9K2efeAPBjmj9AiFG7RJGZOteDeAoHzM0afQ9rcMrMIEpfR575X1iAr_8G9K7Nb82mG8_OTavgdDySk5C-vwkT7ia1xedGHrHkyli6_Ncbf06e0hHE6mJ7QowawhVWlxfExsgtCjXaWo_EpfC5uw7IKU9xHkeYeqUCkv9Ub43jqmdvHVHD1lXnsxH2-aGyz-U3zdQewritzc_1Aep3IuUqA505Dek-KaIRhjkNqY9TYXnH2C2SmQBSaxu3e2rBwlEpozNPpLM04tZHj63YP4998RCYhpp5zPHYiFngjJmq2rWbZo-lgl_OAKom5Y7sa9wlC98xFU_kwSTBFNozNBcFa544WUVp0jumpKExbFSoZBJ4wTx5TK-8l4lGJRsEiK_9mqyazMUMqrevqgxe4Uj3cAVw0hc3AeSafyJX_2xmZhdwOyI_jdcKvlEVa8SJdZzxpCD5GuJBN7VgfXrFXvN2ofDmYz3O5wnQIKZPq9LGKiyL2tRBhpkQUYu0I3ZdABGoBIeqCX2CM7M-UAiSUBtHbTiAKEtgkb942CpafC39J-5V-wjvvDNkc8Doz1xpUWTOkKYmIuKqUCN-SIrC45XhFrgsKK3oc-Eg0V3ANkBYTJsEd0mfpx5t1UmfpneQy5zh7te3OcOadf8KuEFz7f0guH2VLXWUOvHP9gMC7NghzM-GivrBlXltl4yuCQMbtSCfWTbd2CQ_rhzKNNhhiGIFVIQ-Hn-_tqlW4bgtyY212cV8yQp-yYmMz6jBmOwnWIjfGK9GRdegHMONbaf7qCtDYtoAh7-VdwhKeHEMTtkIUMqguMqtGIWmYMCGZMIJ9n1qCf3ncMfbnW9rDfoplQ3AX5DjKPcQ5O25XYLDk3KQGmTWRVC6d6Tr5CS1Q2hTTfAcbu_YhUZCo447VR5Sw1G3KgVrKSglEWQse1jf_p2MtLEIjc6Rz43CyPWwCjlaVX3CqoO41uyTxZdcH0ElyhlkAGXhnYX8o-uYmNAmW7tC1E4r_tWxzKVfvy2VevVGZ3cmMrI9qdrszTOXmFs0iuvUuOBvzwW-qqScKC4b89OYxIGx2za18oMXFAEEUj8C0sp_wHTDNoDIHBosGoOd0HvXVFTh9b_xVaGW0z7nZXYWH_noWNfx2e32N-nUKfjRDs7KwXp7vAr55P3leQqis-2Ll-PrhG2dZ_JowKRfsbgS2iLZr3bOEr4C-4KF5Tvb1fE66zru9-UK6c.ZlS4PvtG23RGwpWC5DEDfQ',
+    'cf_clearance': 'u_KAKoCrBIns5gEljSaCCoo4qQ6azqucYiJDmvYFv7c-1714477461-1.0.1.1-cGzLg9TyXlDcmoyLzZB0ZOaTSdz5panDCMhZQARkZALjBL_9TjmxMi3T9GE7cEcdoBdXQT1t9nNuJAhESNWAdw',
+    '__Secure-next-auth.session-token': 'eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..AT0gds2iT28U0z-M.6awP_lpFfYBkCDgq7cdQMkwlRkoOULsUxz-H48Ca4OMi3E5N66_WbfHCoZ01IpdHbCLZ-x7tIxgIwtaOIXpYOrVUImAo5GwnM_BQNH44GeMMBZoS1mGZtN2d5Hmk67psIKU7g6tuwq2wyQ-yyDQCHflSbUIPNQXNnyr58JNGl8ny-jEMjAJD-rKMNhelWmVUakSU8SvErqVjX1RjKPD5p8imD_YeBxMeCKLZ0x-RaCBotIDGytvia4WH2OcaCQXGRVt5wzD0paxHNFmjdgPdy6qEkRWDR04n3yv7kWBL6GhSW-Qjx7HHxE9KXcx9Bsij9trBVwvESA29v5A8kALhmxZz8e-vY4-ZGF3QzDq4Q93g3OkUJxGsZrDIRNQBjSMctmynBnpDQY73eUvWrICi4322DP2JgpD0rf42juoEA0KvrCF3qSod39XTrJYKUntLIRfAHanXZjUdZRixozH_3muS8KRqfoNgqAWJnPATbybPvXV7sJPHQAC5YADoc2B_yP3UHwa64vpTD1jS-DBRJCYL1sZQhMrR_TV5sER5Y1Q4_fkjF7uomPOkGt1I0W2sjqANa_na6TZhrmfDfMknKUeYyhAVRD78HRzpEmhVzQ1_2EPkwGXwXZaAinroDhm464lErOVKALFmTaxJMjS6X0yJK1r_x-iNBMuJeBUNgrZnuIAtFedA0M7bEmWJ0iJu8hVQ7crCRqy54-I66Y9UPXQH5369E27DDL1jL8QEgVLMqsehcit6GLqxavkN9feKUW-nr6jKg2jaLRnXcSV3jJ_g7ai9JKRUFbu_yhMq_9YWMJfSzAoncShdXWhUaM7zdh8iBsQWSRTXaoMUBKYogwZgyYYjTDexABR9NPLiq66tZhr-VStCO3SKyGrnk0Mj1RDTrAKub6LTqkfnXa8myz6Q8i42duHmVMeFFKWQ3OO0fajx2eO85hjcRWDoyn6uD5HeU5Kl1q9cqVxUsRAEuRecs10eKPUbpY1rBEInGUJh-Jfulsoa49-9_1aCRawGdLwVOJcY5Wq32rSXTYDwN0x5-beKPoRAjFY0XaiQZ43yEB6Aa_mgUCnk88POtqsCSfbUg9_Z7FrR4ybGZiLCEcyfbGT_ssmJxaGmTgPWpHQYKgBIeTgjfEwnBeEevKoymsUxz0WsCseyDo2Hrgud77_gJ3D_BZo3kH0tEUAoRuNqFhBPnaeqURCygA8-49LxBU4qGfZd-FvBux0xlJb7fDbZrejfYBhMPEFBs-9slM1Rh2yboEdcaQc04ulIwKcdZeopkrxhZdYw2PhOmV-Y1b6YQ8LPd8QF5lKXnKicrluOcgshSnUztm7zaMYYpFBQe60-NwOAGTfcpR0pjAfdjoHApb0AdBbSs_SK9vB7j1smImgdEKpaF9cyx-FozrU7ur-94NXFtvXsiTouAXixIeag3lcSTHye8XUnLP1gRl3XLqQdp1aMckemmQ7JMzGjLN60NPSLOq1Dcnyf_g6_RJ7ba7ynJNdqTjBqnPQ4aN6TLgXdFqh2uFgop1LXjimwLMLhnmAcCSlRvfxhf-6W8rHlO6TJhp9i3HwD6bDl_3z08Y1YcWwwbPjBVlMevvzTsXon2rWFLiRb9VZ5nT3kWWhKokiBhEQy2rLPd2dDUssXp8MAi7fGbGM0x1Oy07cisA_OhayGJCEHnx8IDAg7Bbmg8MKqX0A5vPSvCA9tsfuF-inprlsXxYy0Y0IK1bBPqTem2zfOZwoNI227ndJjBEoIwIHEv6SBBbHfONmHen5EkOc5RrLcuN9Ohzfc6CENrPZN-a8idUBneFnbqNkQFdoCIImPQKZ6kNbCkET3E1IsLn2VLd2Bt_SvLLuxM_btDMsIlfBrDPnVjilFuA-8QvV3NRWcDejulD1iLaMfmnFmfYLIRVc3yGXGQE_hnnfWK2WW2I9PGVSxtq6FBYToxmuZWleYL77l0v9vdkstv16RmzAgMORj7gjLUlWLrnHfvxQm8EcOkC2Ng24lwN-sdVWzVHdxhuaqCgzBUG5F2yqthUUIbstlC7iZD19FQRRslH9jtlaR-sAMkbFEKnHmzI5K294sFmMTXrlRP94XyN3dJtxhi7hVVyfUF4n9QiSCnkx7JdZaWMeJRXpIPkBFDUT1zYvFwsgTU2rv_A9O8RC7KFQFnDsd21ajq1GMAX-Aysf4eYYAFODWdq7juCYezsweWHj5uVW6s_62NzQ9EaFwUAQ8AiYFeB7gwmQi6jKfci2GqEZoJmvJL_v015nFqQUBiah4iM_RG52JxRzSCV3QbuP3pif0-_WFNJIyIINNn25LnxEWTcSbP6sfpZPddSRIpr-K6pShSYMweFGbnYfDDC99ck_xMKt4TEGVq0ZwdZASzc0-ZC2dq7I_XhixIw4WQtbL5C4I_CsiLFj9dHK8oNhJKMwboMTkfvZ9F9IytS0B-rreSKPrPWfZghtlHhgMkkqMwNjARzNe2B61WiYiCpMrFPTG0OdyuscKkYb1H8NoKfGZk0zAIefNTOilg6l7O-cEM2XyPvntgYeDKU-E_P7ShTAAvt91gJerRAzqXd-p_yDMgrEtUAj7wCrSNY-2_xv6OxUojkAncfYVFqGbH4T9DVd6_Whe_LvdtFij0EEAd_nZUHhqWA62q6ga8sQMg2KQ2AZIixb67NGD9woIvVEPkanGAtdYfjkuQrtLeLKkz0xLGRtxQMXV53Kv1ms9_-C7NmKgwfhZ14Ltaysc821p44Zr5J0_yaWFhcxZv9QUGAuA3sRguSyTDaHem_ZpJAEWBQpziKzsA2ozsmd1e-LwoE4CQgSqu4D23pbuuuxo7tTCoGUqQHsOf-5QaTJW1r-3sQsYixFm7zHXfX06TucAyNDpLTs73KZChvMTi8kpAj5P8YQx-JBIKPo4AQ83GFxnX1W7FvNLxzrCM7LwS9hAkKtuWfXp8_A.QxgvXtgV6DFkz0r75Afpqw',
 }
 
 headers = {
+    'accept': '*/*',
+    'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
 }
 
 response = requests.get('https://chat.openai.com/api/auth/session', cookies=cookies, headers=headers)
 
-print(response.text)
-print(json.dumps(response, indent=4, ensure_ascii=False))
+print(json.dumps(response.json(), indent=4, ensure_ascii=False))
 ```
 
-
+### 显示账号有哪些模型
 ```
 import requests
 import json
 
 
-
 headers = {
-    'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJyZWV2ZXN0eWxlcjExQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlfSwiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS9hdXRoIjp7InBvaWQiOiJvcmctTE01QWpqU0FwVENrTmx1S1ZFN0Q4YmNZIiwidXNlcl9pZCI6InVzZXItbEJ2M1pscFFZeUhGQW5zM2FoUGJ5UGFXIn0sImlzcyI6Imh0dHBzOi8vYXV0aDAub3BlbmFpLmNvbS8iLCJzdWIiOiJhdXRoMHw2NTFhMjgxNTJlMzBkNWZkMGM5ZTI1ZDAiLCJhdWQiOlsiaHR0cHM6Ly9hcGkub3BlbmFpLmNvbS92MSIsImh0dHBzOi8vb3BlbmFpLm9wZW5haS5hdXRoMGFwcC5jb20vdXNlcmluZm8iXSwiaWF0IjoxNzE0MDE1MDM0LCJleHAiOjE3MTQ4NzkwMzQsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgbW9kZWwucmVhZCBtb2RlbC5yZXF1ZXN0IG9yZ2FuaXphdGlvbi5yZWFkIG9yZ2FuaXphdGlvbi53cml0ZSBvZmZsaW5lX2FjY2VzcyIsImF6cCI6IlRkSkljYmUxNldvVEh0Tjk1bnl5d2g1RTR5T282SXRHIn0.BN01OvB1Hk_WW6b_LkQpXhz-Z0FvFtoCRcNXaS2CdCwr9wK-14aHkZ5ejgM_bkCIxE4gDSFKbrwnUNkXKhg5eYJeG_CWTh5ffNrHt93dQkzy9ixt7_jS90XwkbsEAJeUaFPGgUQwMxNauXuulMUDlXzX9myK8P1aSk4SWSJitojy94GmiI4ARSqVXNl8rtO_OZZlveZc-MjhxeofgQtktIQcH3C1KO7YgftszKbO0qoxF5cOwMxyqTWH51paArvxQ8I37c5BDZxTbjo13F2qTFdaz32PQFW2vq_GLp1irb9XgGFxTGGpp9zwtv8Fht6Cv8s3QPzagnWA9fggn0RWSg',
+    'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJhZHp6enowODA4MDRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJodHRwczovL2FwaS5vcGVuYWkuY29tL2F1dGgiOnsicG9pZCI6Im9yZy1UOTdIMVdRSGtiWmtINjZoa2VLczU5NFciLCJ1c2VyX2lkIjoidXNlci1sVkdKQWdBbTZYRzZhS2NqUTI3S3ZHdmcifSwiaXNzIjoiaHR0cHM6Ly9hdXRoMC5vcGVuYWkuY29tLyIsInN1YiI6ImF1dGgwfDYzODJkZjA3MWE0NWZkMWRhYWY0NWY2MSIsImF1ZCI6WyJodHRwczovL2FwaS5vcGVuYWkuY29tL3YxIiwiaHR0cHM6Ly9vcGVuYWkub3BlbmFpLmF1dGgwYXBwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE3MTQxMDc2NzYsImV4cCI6MTcxNDk3MTY3Niwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCBtb2RlbC5yZWFkIG1vZGVsLnJlcXVlc3Qgb3JnYW5pemF0aW9uLnJlYWQgb3JnYW5pemF0aW9uLndyaXRlIG9mZmxpbmVfYWNjZXNzIiwiYXpwIjoiVGRKSWNiZTE2V29USHROOTVueXl3aDVFNHlPbzZJdEcifQ.q9adcctN-IfduGTqqxHNEvGAJr-rTRyRrmOLvspwmJXYgMfrTMhk2a_6paEWfTga0MCg42TNT9Xe8JC8JQUOPTwubkUHxnoS75El3wny__BToh21UOQAda2oDFcRWHYkRoSl6d5TDx-C4sdWX4LdheZdFNMtqTkBviymApDTtZSlDn4zKw5TbKwl6u797eE324cXu6150h8ZfxiN03pJiFZg6kwNYSEvYFnPgGuV9BjuPDnXuoueWzULPw8w2XDWIVbWTVu2blEiOiIFFBE41JFKvah0vBCyCcS0ZxmRujrw5C4J5MaXbA-yQl_otL3Y59Qrni0UeT2W21IaYHQbvg',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
 }
 
 
-response = requests.get('https://chat.openai.com/backend-api/models', headers=headers).json()
-
+response = requests.get('https://new.oaifree.com/backend-api/models', headers=headers).json()
 
 print(json.dumps(response, indent=4, ensure_ascii=False))
 ```
 
+
+### RefreshToken生成AccessToken
 
 ```
 import requests
@@ -60,42 +62,26 @@ url = "https://token.oaifree.com/api/auth/refresh"
 
 # 定义要发送的数据
 data = {
-    'refresh_token': '8w0tih-OaUDqg8bEhrQXMnRWx6j8WG7a-UWCBpsR8r7dP'
+    'refresh_token': 'tSmmTf7OQqZyfk80_kf3YT6pSOdZ_iSUVp508tu1ixVc8'
 }
 
 # 发送 POST 请求
-response = requests.post(url, data=data).json()
+response = requests.post(url, data=data)
 
 # 检查响应
 if response.status_code == 200:
     # 打印响应的 JSON 数据
-    print(json.dumps(response, indent=4, ensure_ascii=False))
+    print(json.dumps(response.json(), indent=4, ensure_ascii=False))
 else:
     print("Failed to refresh token:", response.status_code)
-
 ```
 
 
-```
-import requests
-
-url = "https://api.oaifree.com/v1/chat/completions"
-payload = {
-    "model": "gpt-3.5-turbo",
-    "messages": [{"role": "user", "content": "Say this is a test!"}],
-    "temperature": 0.7
-}
-headers = {
-    "Content-Type": "application/json",
-    "Authorization": "Bearer YOUR_OPENAI_API_KEY"
-}
-
-response = requests.post(url, json=payload, headers=headers)
-print(response.text)
-```
 
 
-### 前提是GPT4
+
+
+### 对话接口(前提是GPT4)
 ```
 import requests
 
@@ -119,23 +105,52 @@ print(response.text)
 ```
 
 
-镜像网址：https://new.oaifree.com/
-share token地址：https://chat.oaifree.com/token
-ShareToken登录：https://new.oaifree.com/auth/login_share?token=FK密钥
+镜像网址：`https://new.oaifree.com/`
+share token地址：`https://chat.oaifree.com/token`
+ShareToken登录：`https://new.oaifree.com/auth/login_share?token=FK密钥`
 
+### 吾皇的接口
 
-https://chat.openai.com/backend-api/*
-https://chat.openai.com/public-api/*
-
+`https://chat.openai.com/backend-api/*`
+`https://chat.openai.com/public-api/*`
 以上接口代理，分别对应：
-
-https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/backend-api/*
-https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/public-api/*
-
+`https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/backend-api/*`
+`https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/public-api/*`
 
 
-### 有效期3分钟
 
+
+### 生成FKtoken
+
+```
+import requests
+import json
+
+
+headers = {
+    'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+}
+
+data = {
+    'unique_name': '6666',
+    'access_token': 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJhZHp6enowODA4MDRAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJodHRwczovL2FwaS5vcGVuYWkuY29tL2F1dGgiOnsicG9pZCI6Im9yZy1UOTdIMVdRSGtiWmtINjZoa2VLczU5NFciLCJ1c2VyX2lkIjoidXNlci1sVkdKQWdBbTZYRzZhS2NqUTI3S3ZHdmcifSwiaXNzIjoiaHR0cHM6Ly9hdXRoMC5vcGVuYWkuY29tLyIsInN1YiI6ImF1dGgwfDYzODJkZjA3MWE0NWZkMWRhYWY0NWY2MSIsImF1ZCI6WyJodHRwczovL2FwaS5vcGVuYWkuY29tL3YxIiwiaHR0cHM6Ly9vcGVuYWkub3BlbmFpLmF1dGgwYXBwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE3MTQ0Nzg3NDksImV4cCI6MTcxNTM0Mjc0OSwic2NvcGUiOiJvcGVuaWQgcHJvZmlsZSBlbWFpbCBtb2RlbC5yZWFkIG1vZGVsLnJlcXVlc3Qgb3JnYW5pemF0aW9uLnJlYWQgb2ZmbGluZV9hY2Nlc3MiLCJhenAiOiJwZGxMSVgyWTcyTUlsMnJoTGhURTlWVjliTjkwNWtCaCJ9.DQflzHad61F4YEkBwYtTyxu7z45o_9BfsjxSrHPQQxcHDCmyJ83IPOvslidix5reKB-hqzyY7aMtcP3T5KDfcbA6CIJmG1wgg_iSRoV712zeTf-HTMtpEKJIzkUbWcJn3mfMg_0LILNinQFT0EgRwhXDaaUUd-YDgyV1HVpDWNUvmhPnRvi8JFA2-F-P2Ys_yXeaiPbu8A856D326eveOfx0u3ChHVN2qeoC2r7I5qQjQkulTKNfnlOYo2VATvOtv3O3QOlBPE_Go1eIrMTzy_oE_zUPCLXmXPkPMpV1IEdjJbV0Flf7B-8rL6vQZe4-0ixvywXxjxHpQT1lhncKsQ',
+    'expires_in': '0',
+    'site_limit': '',
+    'gpt35_limit': '-1',
+    'gpt4_limit': '-1',
+    'show_conversations': 'true',
+}
+
+response = requests.post('https://chat.oaifree.com/token/register', headers=headers, data=data)
+
+
+# 打印响应的 JSON 数据
+print(json.dumps(response.json(), indent=4, ensure_ascii=False))
+```
+
+
+
+### 登录链接也只能使用一次，3分钟有效。
 ```
 import requests
 import json
@@ -145,7 +160,7 @@ headers = {
 }
 
 json_data = {
-    'share_token': 'fk-346_qWjhfd00Lumof9aQnt4Bmd1R2FyQN0chJGUHGow',
+    'share_token': 'fk-VJgxikgdgfpjJDUOAX2NbboSz3bQ0NSKqVGnThaxl5A',
 }
 
 response = requests.post('https://new.oaifree.com/api/auth/oauth_token', headers=headers, json=json_data).json()

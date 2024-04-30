@@ -18,6 +18,11 @@ export default defineUserConfig({
     navbar: [
       {text: 'vuepress', link: '/vuepress/'},
       {text: 'pandora', link: '/pandora/'},
+      {
+        text: 'Google',
+        link: 'https://google.com',
+        iconClass: 'fab fa-google'  // 使用FontAwesome的class
+      }
     ],
 
     sidebar: {

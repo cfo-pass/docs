@@ -111,11 +111,11 @@ ShareToken登录：`https://new.oaifree.com/auth/login_share?token=FK密钥`
 
 ### 吾皇的接口
 
-`https://chat.openai.com/backend-api/*`
-`https://chat.openai.com/public-api/*`
+`https://chat.openai.com/backend-api/*`  
+`https://chat.openai.com/public-api/*`  
 以上接口代理，分别对应：
-`https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/backend-api/*`
-`https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/public-api/*`
+`https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/backend-api/*`  
+`https://chat.oaifree.com/dad04481-fa3f-494e-b90c-b822128073e5/public-api/*`   
 
 
 

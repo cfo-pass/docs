@@ -22,7 +22,7 @@ export default defineUserConfig({
       {
         text: 'Google',
         link: 'https://google.com',
-        icon: 'fab fa-google'  // 使用FontAwesome的class
+        icon: 'google'  // 使用FontAwesome的class
       }
     ],
 

@@ -14,14 +14,14 @@ actions:
     type: secondary
 
 features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-  - title: Themes
-    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
+  - title: 防止openai使坏
+    details: PLus变3.5的
+  - title: pandora论坛
+    details: 和佬友水贴
+  - title: 官代API
+    details: 无需承担openai封号危险，无需翻墙使用
+  - title: pandora
+    details: 呼吸更加顺畅，无需翻墙，错误更加少
   - title: Plugins
     details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
   - title: Bundlers

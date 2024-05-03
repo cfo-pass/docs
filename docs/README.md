@@ -27,7 +27,8 @@ features:
 
 ---
 
-[pandora论坛][论坛]论坛或者说 [linuxdo论坛][论坛]论坛
+This is the content of home page. Check [Home Page Docs][default-theme-home] for more details.
 
-[论坛]: https://linux.do/
+[default-theme-home]: https://vuejs.press/reference/default-theme/frontmatter.html#home-page
+
 

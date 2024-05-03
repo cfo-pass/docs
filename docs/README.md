@@ -9,8 +9,8 @@ actions:
     link: https://linux.do/
     type: primary
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
+  - text: 吾皇的官代API
+    link: https://api.oaipro.com/
     type: secondary
 
 features:

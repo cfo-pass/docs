@@ -20,8 +20,8 @@ export default defineUserConfig({
       {text: 'vuepress', link: '/vuepress/'},
       {text: 'pandora', link: '/pandora/'},
       {
-        link: 'https://google.com',
-        icon: 'flat-color-icons:google'
+        link: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=4nQaFK_bfuIgquiQvM657bIKaw1Sx4Zx&authKey=woDOQsMsBE1c8sB3b2ElPu7hfPopOm5bOfUlYp0K0efXspny0hY0R8O7On3wOysP&noverify=0&group_code=633589279',
+        icon: 'icon-park:tencent-qq'
       }
     ],
 

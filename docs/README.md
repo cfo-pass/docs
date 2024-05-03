@@ -27,7 +27,7 @@ features:
 
 ---
 
-pandora[default-theme-home]论坛或者说linux do[default-theme-home]论坛
+[pandora论坛][论坛]论坛或者说 [linuxdo论坛][论坛]论坛
 
-[default-theme-home]: https://linux.do/
+[论坛]: https://linux.do/
 

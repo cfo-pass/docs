@@ -22,15 +22,12 @@ features:
     details: 无需承担openai封号危险，无需翻墙使用
   - title: pandora
     details: 呼吸更加顺畅，无需翻墙，错误更加少
-  - title: Plugins
-    details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
-  - title: Bundlers
-    details: Default bundler is Vite, while Webpack is also supported. Choose the one you like!
 
-footer: MIT Licensed | Copyright © 2018-present VuePress Community
+
+
 ---
 
-This is the content of home page. Check [Home Page Docs][default-theme-home] for more details.
+pandora[default-theme-home]论坛或者说linux do[default-theme-home]论坛
 
-[default-theme-home]: https://vuejs.press/reference/default-theme/frontmatter.html#home-page
+[default-theme-home]: https://linux.do/
 

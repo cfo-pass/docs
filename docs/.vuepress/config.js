@@ -28,6 +28,7 @@ export default defineUserConfig({
         text: '吾皇的TG群',
         link: 'https://t.me/ja_netfilter_group'
         icon: 'logos:telegram'
+      }
     ],
 
     sidebar: {

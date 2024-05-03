@@ -20,9 +20,14 @@ export default defineUserConfig({
       {text: 'vuepress', link: '/vuepress/'},
       {text: 'pandora', link: '/pandora/'},
       {
+        text: '我自己的QQ群，不是吾皇的',
         link: 'http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=4nQaFK_bfuIgquiQvM657bIKaw1Sx4Zx&authKey=woDOQsMsBE1c8sB3b2ElPu7hfPopOm5bOfUlYp0K0efXspny0hY0R8O7On3wOysP&noverify=0&group_code=633589279',
         icon: 'icon-park:tencent-qq'
       }
+      {
+        text: '吾皇的TG群',
+        link: 'https://t.me/ja_netfilter_group'
+        icon: 'logos:telegram'
     ],
 
     sidebar: {
